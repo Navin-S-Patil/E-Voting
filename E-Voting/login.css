@@ -1,0 +1,67 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.top_heading{
+    background-color: whitesmoke;
+    padding: 1px;
+    size: 200px 100px;
+    border: 0ch;
+}
+header h1{
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 68, 0, 0.733);
+    text-align: center;
+    font-weight: 600;
+    padding: 5px;
+    padding-left: 23%;
+    padding-right: 23%;
+}
+#first_logo{
+    float: left;
+}
+
+.logo_img{
+    /* display: flex; */
+    padding: 10px;
+}
+nav{
+    background-color: gray;
+    padding: 20px;
+}
+
+section h2{
+    text-align: center;
+    margin: 2px;
+    padding: 10px;
+    font-size: 40px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+div button{
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 0px solid white;
+    background-color: skyblue;
+}
+div button:hover{
+    color: purple;
+}
+#service_tab{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 40px;
+    align-items: center;
+    padding: 25px;
+    margin-left: 300px;
+    margin-right: 300px;
+}

@@ -1,0 +1,147 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.top_heading{
+    background-color: whitesmoke;
+    padding: 1px;
+    size: 200px 100px;
+    border: 0ch;
+}
+header h1{
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgba(255, 68, 0, 0.733);
+    text-align: center;
+    font-weight: 600;
+    padding: 5px;
+    padding-left: 23%;
+    padding-right: 23%;
+}
+#first_logo{
+    float: left;
+}
+
+.logo_img{
+    /* display: flex; */
+    padding: 10px;
+}
+nav{
+    background-color: gray;
+    padding: 20px;
+}
+/* nav a{
+    font-size: 25px;
+    text-decoration: none;
+    padding: 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: white;
+    padding-left: 10%;
+}
+nav a:hover{
+    color:blueviolet;
+} */
+#login_name{
+    font-size: 40px;
+    color: rgb(51, 81, 136);
+}
+#fieldset{
+    margin-left: 500px;
+    margin-right: 500px;
+    font-size: 20px;
+    background-color: white;
+    border: 1px solid rgb(58, 93, 156);
+}
+input[type="text"],input[type="password"]{
+    padding: 10px;
+    width: 50%;
+    margin: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+}
+input[type="submit"]{
+    background-color: skyblue;
+    padding: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+    border: 1px solid white;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+input[type='button']{
+    background-color: skyblue;
+    padding: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 20px;
+    border: 1px solid white;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+input[type="submit"]:hover{
+    color: blueviolet;
+}
+input[type="button"]:hover{
+    color: blueviolet;
+}
+
+#sign_in{
+    text-decoration: none;
+}
+#sign_in:visited{
+    color: black;
+}
+#sign_in:hover{
+    color: purple;
+}
+form{
+    text-align: center;
+    text-decoration: none;
+}
+.horizontal_rule_home{
+    /* margin-top: 40px; */
+    margin-bottom: 40px;    
+    border: 10px solid rgb(177, 105, 83);
+}
+
+#Service_Name{
+    font-size: 50px;
+    text-align: center;
+    color: royalblue;
+    padding-bottom: 30px;
+}
+/* #consultancy:hover{
+    
+} */
+footer{
+    background-color: rgb(66, 58, 58);
+    overflow: hidden;
+}
+footer a{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 20px;
+    float: left;
+    text-decoration: none;
+}
+footer a:hover{
+    color: blueviolet;
+}
+#feedback{
+    color: royalblue;
+    font-size: 40px; 
+}
+textarea{
+    width: 50%;
+    
+}
+.clip_path{
+    clip-path: polygon(0% 15%, 33% 32%, 15% 0%, 85% 0%, 74% 30%, 100% 15%, 100% 82%, 71% 70%, 85% 100%, 15% 100%, 28% 68%, 0% 85%);
+}
