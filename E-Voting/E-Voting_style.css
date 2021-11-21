@@ -45,11 +45,12 @@ nav{
     padding-top: 5%;
     padding-bottom: 5%;
 }
-#Input_Buttons{
-    padding-left: 25%;
-    padding-top: 5%;
-}
 input[type=radio]{
     padding: 3%;
     margin-top: 10%;
+    margin-right: 2%;
+}
+#Input_Buttons{
+    padding-left: 25%;
+    padding-top: 5%;
 }
