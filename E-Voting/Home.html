@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="home_style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="./JavaScript/init-firebase.js"></script>
 </head>
 <body>
     <div>
@@ -57,13 +61,11 @@
 <hr class="horizontal_rule_home">
     <div class="login">
     <div id="fieldset">
-        <form action="">
+        <form action="javascript:void(0);"></form>
             <h2 id="login_name">Login <img src="image/login_person_logo.png" width="30px" height="30px"></h2>
-            <p>Username : <input type="text" name="Username" id="" placeholder="abc@xyz.com"></p>
-            <p>Password : <input type="password" name="Password" id="" placeholder="Password"></p>
-            <a href="login.html"><input type="submit" value="login"></a>
+            <p>Phone Number : <input type="text" name="Username" id="phoneNumber" placeholder="Phonenumber"></p>
+            <input type="submit" value="login" id="sign-in-button" onclick="signIn()">
             <br>
-            <a href="New_User.html"><input type="button" value="New User"></a>
         </form>
     </div>
     </div>
@@ -71,7 +73,7 @@
 <br>
         <section>
             <div>
-            <form action="">
+            <form>
                 <h2 id="feedback">Feedback</h2>
                 <textarea name="Feedback" id="" cols="30" rows="12" title=""></textarea><br>
                 <input type="submit" value="Submit">
@@ -100,9 +102,36 @@
             })
 
             var myCarousel = document.getElementById('myCarousel')
-            myCarousel.addEventListener('slide.bs.carousel', function () {
-            // do something...
-            })
+      </script>
+      <script>
+        window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('sign-in-button', {
+  'size': 'invisible',
+  'callback': (response) => {
+    // reCAPTCHA solved, allow signInWithPhoneNumber.
+    signIn();
+  }
+});
+      </script>
+      <script>
+        function getPhoneNumberFromUserInput() {
+          return `+91${document.getElementById("phoneNumber").value}`;
+        }
+      </script>
+      <script>
+        function signIn() {
+          const phoneNumber = getPhoneNumberFromUserInput();
+const appVerifier = window.recaptchaVerifier;
+firebase.auth().settings.appVerificationDisabledForTesting = true;
+firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
+    .then((confirmationResult) => {
+      // SMS sent. Prompt user to type the code from the message, then sign the
+      // user in with confirmationResult.confirm(code).
+      window.confirmationResult = confirmationResult;
+      // ...
+    }).catch((error) => {
+      console.log(error)
+    });
+        }
       </script>
 </body>
 </html>
